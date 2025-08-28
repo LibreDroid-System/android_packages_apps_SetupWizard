@@ -71,6 +71,10 @@ public class SetupWizardApp extends Application {
                         Settings.Global.ASSISTED_GPS_ENABLED, 1);
             }
         }
+        Settings.Secure.putString(getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD, "com.yuyan.pinyin.offline.release/com.yuyan.imemodule.service.ImeService" );
+        Settings.Secure.putString(getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS, "com.yuyan.pinyin.offline.release/com.yuyan.imemodule.service.ImeService" );
     }
 
     public static StatusBarManager getStatusBarManager() {
